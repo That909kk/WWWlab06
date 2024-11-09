@@ -4,13 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import vn.edu.iuh.fit.backend.models.entities.Post;
 import vn.edu.iuh.fit.backend.services.PostService;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/api/posts")
 public class PostResource {
     @Autowired
@@ -18,5 +20,9 @@ public class PostResource {
     @GetMapping("")
     public ResponseEntity<List<Post>> getAllPosts() {
         return ResponseEntity.ok(postService.getAllPosts());
+    }
+    @GetMapping("/{id}")
+    public ResponseEntity<Post> getPostById(@PathVariable Long id) {
+        return ResponseEntity.ok(postService.getPostById(id));
     }
 }
