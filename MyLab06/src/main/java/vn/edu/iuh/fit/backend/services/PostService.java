@@ -8,7 +8,7 @@ import vn.edu.iuh.fit.backend.repositories.PostRepository;
 import java.util.List;
 
 @Service
-public class PostServices {
+public class PostService {
     @Autowired
     private PostRepository postRepository;
 

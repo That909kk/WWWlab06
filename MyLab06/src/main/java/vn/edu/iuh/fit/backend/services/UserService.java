@@ -8,7 +8,7 @@ import vn.edu.iuh.fit.backend.repositories.UserRepository;
 import java.util.List;
 
 @Service
-public class UserServices {
+public class UserService {
     @Autowired
     private UserRepository userRepository;
 

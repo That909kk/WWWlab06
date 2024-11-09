@@ -8,7 +8,7 @@ import vn.edu.iuh.fit.backend.repositories.PostCommentRepository;
 import java.util.List;
 
 @Service
-public class PostCommentServices {
+public class PostCommentService {
     @Autowired
     private PostCommentRepository postCommentRepository;
     public List<PostComment> getAllPostComments() {

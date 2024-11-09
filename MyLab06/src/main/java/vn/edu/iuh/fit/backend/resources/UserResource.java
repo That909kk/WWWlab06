@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import vn.edu.iuh.fit.backend.models.entities.User;
-import vn.edu.iuh.fit.backend.services.UserServices;
+import vn.edu.iuh.fit.backend.services.UserService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
-public class UserResources {
+public class UserResource {
     @Autowired
-    private UserServices userServices;
+    private UserService userServices;
 
     @GetMapping("")
     public ResponseEntity<List<User>> getAllUsers() {
